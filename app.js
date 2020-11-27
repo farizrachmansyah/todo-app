@@ -5,13 +5,15 @@ const todoList = document.querySelector(".todo-list");
 const filterOption = document.querySelector(".filter-todo");
 // const todoContainer = document.querySelector(".todo-container");
 
-let formWrapper = document.querySelector(".form-wrapper");
-let formWidth = formWrapper.offsetWidth;
-
-// ngasih min-width buat ul dari size widthnya form
-todoList.style.minWidth = formWidth + "px";
 
 // Event listener
+window.addEventListener("load", () => {
+    let formWrapper = document.querySelector(".form-wrapper");
+    let formWidth = formWrapper.offsetWidth;
+
+    // ngasih min-width buat ul dari size widthnya form
+    todoList.style.minWidth = formWidth + "px";
+});
 document.addEventListener("DOMContentLoaded", getTodos);
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteAndCheck);
